@@ -40,7 +40,7 @@
 		},
 		_create: function() 
 		{
-			//this.element.hide();
+			this.element.hide();
 			var self = this;
 			this._render();
 
@@ -78,8 +78,7 @@
 		{
 			this._trigger("onRenderStart");
 			if (this.control != undefined) this.control.remove();
-			var self = this,
-			readonly = this.options.readonly;
+			var self = this;
 			this.control = $('<div class="siw_datetimepicker siw_noselect  siw_inline"><div class="siw_timepicker active"><div class="siw_buttons">'
 			+'<div class="siw_prev prev_hour"></div><div class="siw_prev prev_minute"></div></div><div class="siw_time_box siw_scroller_box"><div class="siw_time_variant" style="margin-top: 0px;">'
 			+'<input class="siw_time_edit hours" type="text"/><div class="siw_separator">:</div><input class="siw_time_edit minutes" type="text"/></div></div><div class="siw_buttons">'
