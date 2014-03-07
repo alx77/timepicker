@@ -1,0 +1,236 @@
+.siw_datetimepicker{
+	box-shadow: 0px 5px 15px -5px rgba(0, 0, 0, 0.506);
+	background: #FFFFFF;
+	border-bottom: 1px solid #BBBBBB;
+	border-left: 1px solid #CCCCCC;
+	border-right: 1px solid #CCCCCC;
+	border-top: 1px solid #CCCCCC;
+	color: #333333;
+	display: block;
+	font-family: "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+	padding: 2px 8px 0 0;
+	position: absolute;
+	z-index: 9999;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	display:none;
+}
+
+/*For IE8 or lower*/
+.siw_datetimepicker button {
+    border:none !important;
+}
+
+.siw_noselect{
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	-o-user-select: none;
+	user-select: none;
+}
+.siw_noselect::selection { background: transparent; }
+.siw_noselect::-moz-selection { background: transparent; }
+.siw_datetimepicker.siw_inline{
+	display: inline-block;
+	position: static;
+	box-shadow: none;
+}
+.siw_datetimepicker *{
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	padding:0px;
+	margin:0px;
+}
+.siw_datetimepicker .siw_datepicker, .siw_datetimepicker  .siw_timepicker{
+	display:none;
+}
+.siw_datetimepicker .siw_datepicker.active, .siw_datetimepicker  .siw_timepicker.active{
+	display:block;
+}
+.siw_datetimepicker .siw_datepicker{
+	width: 224px;
+	float:left;
+	margin-left:8px;
+}
+.siw_datetimepicker  .siw_timepicker{
+	width: 58px;
+	float:left;
+	text-align:center;
+	margin-left:8px;
+	margin-top:0px;
+}
+.siw_datetimepicker  .siw_datepicker.active+.siw_timepicker{
+	margin-top:8px;
+	margin-bottom:3px
+}
+
+.siw_datetimepicker  .siw_prev, .siw_datetimepicker  .siw_next,.siw_datetimepicker  .siw_today_button{
+	background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFoAAAAeCAYAAACsYQl4AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA2ZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDozQjRCQjRGREU4MkNFMzExQjRDQkIyRDJDOTdBRUI1MCIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDpCQjg0OUYyNTZDODAxMUUzQjMwM0IwMERBNUU0ODQ5NSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDpCQjg0OUYyNDZDODAxMUUzQjMwM0IwMERBNUU0ODQ5NSIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ1M2IChXaW5kb3dzKSI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOkI5NzE3MjFBN0E2Q0UzMTFBQjJEQjgzMDk5RTNBNTdBIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjNCNEJCNEZERTgyQ0UzMTFCNENCQjJEMkM5N0FFQjUwIi8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+aQvATgAAAfVJREFUeNrsmr1OwzAQxzGtkPjYEAuvVGAvfQIGRKADE49gdLwDDwBiZ2RhQUKwICQkWLsgFiRQuIBTucFJ/XFp4+hO+quqnZ4uvzj2nV2RpukCW/22yAgYNINmc7du7DcghCjrkqgOKjF1znpt6rZ0AGWQj7TvCU8d9UM+QAGDrhdyc2Bnc1WVVPBev9V8lBnY+rDwncWZThG4xk4lmxtJy2AHgoY/FySgbSBPwPZ8mEXbQx3aDERb0EbYAYFC7pcAtAvkMWwC0D3NX58S9D/YnoGC7nPWr3Dg9JTbtuHhDShBT8D2CBSK/iIEvVXxpuxSgh7DdgwUTL4iA92zmJb6lKB/YTsECmV+IgK947AGDIqgQ/LojsO135Hn51l2cWlov0JdGNrPUceueXRwilSVgkUyom9Rd6gbLfYTDeO+1v6orn0InTogYDGUkYLO3/wc9BdqqTCKP1Tfi+oTIaCBIL2TES+GTyruT9S61p6BHam+99DFEAgLFklYsIBHwSI9QY80H5ta+1rB/6ovaKihBJeEJbgLbBlQgl+j3lDPqA2tfQV1j3pVn8s+oKHGTSVJ+FqDLeR5bCqJ2E/BCycsoLZETXaKGs7rhKVt+9HZScrZNMi88V8P7LlDbvOZYaJVpMMmBCT4n0o8dTBoNgbdWPsRYACs3r7XyNfbnAAAAABJRU5ErkJggg==');
+}
+
+.siw_datetimepicker  .siw_next:active,.siw_datetimepicker  .siw_prev:active{
+}
+.siw_datetimepicker  .siw_next,.siw_datetimepicker  .siw_prev ,.siw_datetimepicker  .siw_today_button{
+	background-color: transparent;
+	background-repeat: no-repeat;
+	border: 0px none currentColor;
+	cursor: pointer;
+	display: block;
+	height: 30px;
+	opacity: 0.5;
+	outline: medium none currentColor;
+	overflow: hidden;
+	padding: 0px;
+	position: relative;
+	text-indent: 100%;
+	white-space: nowrap;
+	width: 20px;
+}
+.siw_datetimepicker  .siw_timepicker .siw_buttons{
+	float:none;
+	display: inline-block;
+}
+.siw_datetimepicker  .siw_timepicker .siw_prev,
+.siw_datetimepicker  .siw_timepicker .siw_next{
+	float:left;
+	background-position:-41px -15px;
+	height: 15px;
+	width: 28px;
+	display: block;
+	margin-left:1px;
+	margin-top:7px;
+}
+
+.siw_datetimepicker  .siw_timepicker .siw_prev{
+	background-position:-41px 0px;
+	margin-top:0px;
+}
+.siw_datetimepicker  .siw_timepicker .siw_time_box{
+	height:27px;
+	overflow:hidden;
+	border-bottom:1px solid #DDDDDD;
+}
+.siw_datetimepicker  .siw_timepicker .siw_time_box >div >div{
+	background: #F5F5F5;
+	border-top:1px solid #DDDDDD;
+	color: #666666;
+	font-size: 12px;
+	text-align: center;
+	border-collapse:collapse;
+	cursor:pointer;
+	border-bottom-width:0px;
+	height:25px;
+	line-height:25px;
+}
+
+.siw_datetimepicker  .siw_timepicker .siw_time_box >div > div:first-child{
+ border-top-width:0px;
+}
+.siw_datetimepicker  .siw_next:hover,
+.siw_datetimepicker  .siw_prev:hover {
+    opacity: 1;
+
+}
+.siw_datetimepicker  .siw_label{
+	display: inline;
+    position: relative;
+    z-index: 9999;
+    margin: 0;
+    padding: 5px 3px;
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: bold;
+    background-color: #fff;
+	float:left;
+	width:182px;
+	text-align:center;
+	cursor:pointer;
+}
+.siw_datetimepicker  .siw_label:hover{
+	text-decoration:underline;
+}
+.siw_datetimepicker  .siw_label > .siw_select{
+	border:1px solid #ccc;
+	position:absolute;
+	display:block;
+	right:0px;
+	top:30px;
+	z-index:101;
+	display:none;
+	background:#fff;
+	max-height:160px;
+	overflow-y:hidden;
+}
+.siw_datetimepicker  .siw_label > .siw_select.siw_monthselect{right:-7px;}
+.siw_datetimepicker  .siw_label > .siw_select.siw_yearselect{right:2px;}
+.siw_datetimepicker  .siw_label > .siw_select > div > .siw_option:hover{
+	color: #fff;
+    background: #ff8000;
+}
+.siw_datetimepicker  .siw_label > .siw_select > div > .siw_option{
+	padding:2px 10px 2px 5px; 
+}
+.siw_datetimepicker  .siw_label > .siw_select > div > .siw_option.siw_current{
+	background: #33AAFF;
+	box-shadow: #178FE5 0px 1px 3px 0px inset;
+	color:#fff;
+	font-weight: 700;
+}
+.siw_datetimepicker  .siw_timepicker .siw_time_box >div >div.siw_current{
+	background: #33AAFF;
+	box-shadow: #178FE5 0px 1px 3px 0px inset;
+	color:#fff;
+	font-weight: 700;
+}
+.siw_datetimepicker  .siw_time_box >div >div.siw_disabled{
+	opacity:0.5;
+}
+/*.siw_datetimepicker  .siw_timepicker .siw_time_box >div >div:hover{
+	color: #fff !important;
+    background: #ff8000 !important;
+    box-shadow: none !important;
+}
+.siw_datetimepicker  .siw_timepicker .siw_time_box >div >div.siw_disabled:hover{
+	color: inherit	!important;
+    background: inherit !important;
+    box-shadow: inherit !important;
+}*/
+.siw_time_box{
+	position:relative;
+	border:1px solid #ccc;
+}
+.siw_datetimepicker  .siw_timepicker .siw_time_edit{
+	width: 26px;
+	float: left;
+	border: none;
+/*	position:relative;
+	left: 2px;
+	top: 3px;
+	*/
+	background: #F5F5F5;
+	border-top:1px solid #DDDDDD;
+	color: #666666;
+	font-size: 12px;
+	text-align: center;
+	border-collapse:collapse;
+	cursor:pointer;
+	height:25px;
+	line-height:25px;
+}
+.siw_datetimepicker  .siw_timepicker .siw_time_edit:hover{
+	color: #fff !important;
+    background: #ff8000 !important;
+    box-shadow: none !important;
+}
+.siw_datetimepicker  .siw_timepicker .siw_time_edit:active{
+	color: #fff !important;
+    background: #ff8000 !important;
+    box-shadow: none !important;
+}
+
+.siw_datetimepicker  .siw_timepicker .siw_separator{
+	float: left;
+	width: 4px;
+}
